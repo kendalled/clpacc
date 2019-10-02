@@ -1,2 +1,1 @@
-# clpacc
- clpacc static site
+# A website.
