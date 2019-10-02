@@ -373,6 +373,57 @@ h1, h2, h3, h4 {
   color: #111;
   font-weight: 400; }
 
+h4 span {
+  color: #1f1f1f;
+  margin: 0 1rem;
+  border: 2px solid #6C63FF;
+  border-radius: 999rem;
+  padding: .35rem .75rem;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4);
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+    box-shadow: 0 0 0 10px rgba(108, 99, 255, 0);
+  }
+
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+    box-shadow: 0 0 0 0 rgba(108, 99, 255, 0);
+  }
+}
+
+.pulse {
+  padding: 0.2rem .4rem 0rem .4rem;
+  border-radius: 100%;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(108, 99, 255, 0.4);
+  animation: pulse 1.5s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+
 h5, h6 {
   margin: 1.414em 0 0.5em;
   line-height: 1.4;
@@ -815,7 +866,7 @@ select {
   width: 100%;
   display: block;
   list-style: none;
-  background-color: #6C63FF;
+  background-color: #333C44;
   color: #fff; }
 
 .nav__mobile li {
@@ -1004,9 +1055,14 @@ select {
     .step__image {
       max-width: 200px; } }
 
+@media (min-width: 998px) {
+  .step__text {
+   margin-left: 4.65rem !important;
+  }
+}
 .step__text {
   max-width: 36ch;
-  text-align: left;
+  text-align: center;
   margin-left: auto;
   margin-right: auto; }
 
