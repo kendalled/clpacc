@@ -753,7 +753,9 @@ select {
   font-size: 1.325rem;
   transition: 0;
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  padding-top: .75rem;
+}
 
 .navbar__menu {
   display: none; }
