@@ -1052,7 +1052,7 @@ select {
   -moz-user-drag: none;
   -o-user-drag: none; }
 .steps__inner .step:last-child .step__media .step__image {
-  margin-left: 0;
+  margin-left: 1rem;
 }
   @media (min-width: 600px) {
     .step__image {
