@@ -1046,11 +1046,14 @@ select {
   height: auto;
   max-width: 300px;
   margin-top: 8pt;
+  margin-left: 4rem;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none; }
+  -o-user-drag: none; }
+.steps__inner .step:last-child .step__media .step__image {
+  margin-left: 0;
+}
   @media (min-width: 600px) {
     .step__image {
       width: 13rem;
