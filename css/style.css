@@ -1043,8 +1043,8 @@ select {
       margin: 32pt 0; } }
 
 .step__image {
-  max-height: 200px;
-  max-width: 200px;
+  height: auto;
+  max-width: 300px;
   margin-top: 8pt;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -1053,7 +1053,8 @@ select {
   user-drag: none; }
   @media (min-width: 600px) {
     .step__image {
-      max-width: 200px; } }
+      width: 13rem;
+    height: auto; } }
 
 @media (min-width: 998px) {
   .step__text {
