@@ -16,13 +16,13 @@
     <nav class="nav__mobile"></nav>
     <div class="container">
       <div class="navbar__inner">
-        <a href="/" class="navbar__logo"><img src="images/logo2medium.png"
+        <a href="#hero" class="navbar__logo"><img src="images/logo2medium.png"
             style="max-height: 45px; width: auto;"></a>
         <nav class="navbar__menu">
           <ul>
-            <li><a href="#">Lapel Pins</a></li>
-            <li><a href="#">Challenge Coins</a></li>
-            <li><a href="#">Keychains</a></li>
+            <li><a href="#lapelpins" id="lapelpin">Lapel Pins</a></li>
+            <li><a href="#challengecoins" id="challengecoin">Challenge Coins</a></li>
+            <li><a href="#keychains" id="keychain">Keychains</a></li>
           </ul>
         </nav>
         <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@
     </div>
   </div>
   <!-- Hero unit -->
-  <div class="hero">
+  <div class="hero" id="hero">
     <div class="hero__overlay hero__overlay--gradient"></div>
     <div class="hero__mask"></div>
     <div class="hero__inner">
@@ -46,7 +46,7 @@
             <p class="hero__text">We design your custom item(s) and email you an art proof - with no obligation. Free
               shipping and quick turnarounds. Our design team provides a <b>same-day</b> quote.</p>
             <a href="https://lapelpinsandcoins.com" class="button button__accent">Free Quote</a>
-            <a href="#" class="button hero__button">Learn more</a>
+            <a href="#target" class="button hero__button">Learn more</a>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
     </div>
   </div>
   <!-- Expanded sections -->
-  <div class="expanded landing__section">
+  <div class="expanded landing__section" id="lapelpins">
     <div class="container">
       <div class="expanded__inner">
         <div class="expanded__media">
@@ -111,7 +111,7 @@
       </div>
     </div>
   </div>
-  <div class="expanded landing__section">
+  <div class="expanded landing__section" id="challengecoins">
     <div class="container">
       <div class="expanded__inner">
         <div class="expanded__media">
@@ -127,7 +127,7 @@
       </div>
     </div>
   </div>
-  <div class="expanded landing__section">
+  <div class="expanded landing__section" id="keychains">
     <div class="container">
       <div class="expanded__inner">
         <div class="expanded__media">
@@ -178,20 +178,47 @@
         </div>
       </div>
     </div>
-    <script>
-      function nextStep(step) {
-        switch (step) {
-          case 0:
-            document.getElementById('step1').style.display = "none";
-            console.log('on to step 2!');
-            break;
-        
-          default:
-            break;
-        }
-      }
-    </script>
     <script src='js/app.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script>
+       $(document).ready(function(){
+       // Add smooth scrolling to all links
+       $("a").on('click', function(event) {
+
+       // Make sure this.hash has a value before overriding default behavior
+       if (this.hash !== "") {
+       // Prevent default anchor click behavior
+       event.preventDefault();
+
+       // Store hash
+       var hash = this.hash;
+
+       // Using jQuery's animate() method to add smooth page scroll
+       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+       $('html, body').animate({
+       scrollTop: $(hash).offset().top
+       }, 800, function(){
+
+       // Add hash (#) to URL when done scrolling (default click behavior)
+       window.location.hash = hash;
+       });
+       } // End if
+       });
+       });
+     </script>
+     <script>
+       function nextStep(step) {
+         switch (step) {
+           case 0:
+             document.getElementById('step1').style.display = "none";
+             console.log('on to step 2!');
+             break;
+
+           default:
+             break;
+         }
+       }
+     </script>
 </body>
 
 </html>
