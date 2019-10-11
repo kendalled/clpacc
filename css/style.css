@@ -1130,7 +1130,7 @@ select {
 
 .cta--reverse {
   /* background: linear-gradient(to left, #6C63FF, #4641FF);  */
-  background-image: linear-gradient(rgba(108, 99, 255, 0.35), rgba(108, 99, 255, 0.85)),
+  background-image: linear-gradient(rgba(108, 99, 255, 0.55), rgba(108, 99, 255, 0.85)),
   url('../images/collage.jpg');
   background-size: contain;
   background-attachment: fixed;
